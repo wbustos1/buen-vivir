@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* ==== MENU GLOBAL ==== */
+
+.menu-global {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 5.5em;
+    width: 100%;
+    margin-bottom: 1em;
+    color: black;
+    /*background-color: #f7f7f7;*/
+    background-color: white;
+    transition: box-shadow 0.5s ease;
+}
+.menu-global-scrolled {
+    /*border-bottom: 10px solid black;*/
+    box-shadow: 0 2px 8px rgba(126, 126, 126, 0.3);
+}
+
+/* MENU CONTENT */
+.menu-logo {
+    display: flex;
+    flex-grow: 2;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-logo img {
+    transition: all 0.3s;
+}
+
+.menu-logo:hover img {
+    transform: translateY(-5px);
+}
+
+/* MENU OPTIONS LINKS */
+.menu-options {
+    display: flex;
+    flex-grow: 4;
+    justify-content: center;
+}
+.menu-options .menu-options-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.menu-options .menu-options-list li {
+    font-weight: 600;
+    font-size: 18px;
+}
+.menu-options .menu-options-list li a {
+    position: relative; /*This is relative. Then the absolute line will position relative to this */
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    color: #232323;
+    transition: all 0.3s ease;
+}
+.menu-options .menu-options-list li a:hover {
+    color: #b6494e;
+}
+/* BASE LINE OF LINKS */
+.menu-options .menu-options-list li a::before {
+    content: "";
+    position: absolute; /* Being absolute it will position under the closer "relative" parent */
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #b6494e;
+    transition: all 0.3s ease-out;
+}
+.menu-options .menu-options-list li a:hover::before {
+    width: 2em; /*50%; /* Ancho completo de la línea */
+    left: calc(50% - 1em); /*25%; /* Alinea la línea a la izquierda */
+}
+
+/* CONSULT BUTTON */
+.menu-contact {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.menu-contact .consult-btn {
+    width: 18em;
+    display: flex;
+    align-self: flex-end;
+    height: 100%;
+    border-radius: 0 0 0 15px;
+    align-items: center;
+    justify-content: center;
+    background-color: #b6494e;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+    font-weight: 500;
+}
+.menu-contact .consult-btn * {
+    transition: inherit;
+}
+
+.menu-contact .consult-btn:hover {
+    background-color: #b45a63;
+    border-radius: 0 0 0 40px;
+}
+
+.menu-contact .consult-btn span.text {
+    padding-right: 0.7em;
+}
+.menu-contact .consult-btn:hover span.text {
+    padding-right: 0.3em;
+}
+
+.menu-contact .fa-phone {
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    font-size: 20px;
+    transition: all 0.5s;
+    margin-right: 15px;
+}
+.menu-contact .fa-phone::before {
+    content: "\f095";
+}
+.menu-contact .consult-btn:hover i {
+    transform: translateX(5px) rotate(15deg);
+}
+
+/* ==== BODY SECTIONS ==== */
+.section {
+    height: 50em;
+}
+
+.first {
+    padding-top: 7em;
+    background-color: white;
+}
+
+.second {
+    background-color: yellow;
+}

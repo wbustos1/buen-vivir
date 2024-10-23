@@ -1,11 +1,6 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 /* ==== MENU GLOBAL ==== */
 
-.menu-global {
+header {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -16,6 +11,7 @@ body {
     /*background-color: #f7f7f7;*/
     background-color: white;
     transition: box-shadow 0.5s ease;
+    z-index: 3;
 }
 .menu-global-scrolled {
     /*border-bottom: 10px solid black;*/
@@ -40,23 +36,23 @@ body {
 }
 
 /* MENU OPTIONS LINKS */
-.menu-options {
+nav {
     display: flex;
     flex-grow: 4;
     justify-content: center;
 }
-.menu-options .menu-options-list {
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
 }
-.menu-options .menu-options-list li {
+nav ul li {
     font-weight: 600;
     font-size: 18px;
 }
-.menu-options .menu-options-list li a {
+nav ul li a {
     position: relative; /*This is relative. Then the absolute line will position relative to this */
     text-decoration: none;
     cursor: pointer;
@@ -64,11 +60,11 @@ body {
     color: #232323;
     transition: all 0.3s ease;
 }
-.menu-options .menu-options-list li a:hover {
+nav ul li a:hover {
     color: #b6494e;
 }
 /* BASE LINE OF LINKS */
-.menu-options .menu-options-list li a::before {
+nav ul li a::before {
     content: "";
     position: absolute; /* Being absolute it will position under the closer "relative" parent */
     bottom: 0;
@@ -78,7 +74,7 @@ body {
     background-color: #b6494e;
     transition: all 0.3s ease-out;
 }
-.menu-options .menu-options-list li a:hover::before {
+nav ul li a:hover::before {
     width: 2em; /*50%; /* Ancho completo de la línea */
     left: calc(50% - 1em); /*25%; /* Alinea la línea a la izquierda */
 }
@@ -133,18 +129,4 @@ body {
 }
 .menu-contact .consult-btn:hover i {
     transform: translateX(5px) rotate(15deg);
-}
-
-/* ==== BODY SECTIONS ==== */
-.section {
-    height: 50em;
-}
-
-.first {
-    padding-top: 7em;
-    background-color: white;
-}
-
-.second {
-    background-color: yellow;
 }

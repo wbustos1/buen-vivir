@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.no-bullet {
+    text-decoration: none;
+    list-style: none;
+}
+
+.no-decoration-url {
+    text-decoration: none;
+    color: black;
+}
+
+/* ==== BODY SECTIONS ==== */
+section {
+    height: 50em;
+}
+
+section.bienvenido {
+    padding-top: 7em;
+}
+
+section.bienvenido .image-carousel img {
+}
+
+section.quienes-somos {
+    background-color: yellow;
+}
+
+section.nuestros-servicios {
+    background-color: green;
+}
+
+section.ubicacion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #b6494e;
+}
+
+section.ubicacion h1 {
+    color: #f7f7f7;
+}
+section.ubicacion .contacto {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    font-weight: 600;
+    border-radius: 15px;
+    height: 90%;
+    width: 40%;
+}
+
+section.ubicacion span,
+section.ubicacion span a {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: #f7f7f7;
+}
+
+section.ubicacion h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+#map {
+    width: 900px;
+    height: 600px;
+}
+
+section.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f7f7f7;
+    background-color: #363636;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    font-size: 18px;
+    height: 5em;
+}
+
+.fixed-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 2;
+}
+
+.fixed-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b6494e;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    writing-mode: vertical-lr;
+    border-radius: 15px 0 0 15px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px 5px 20px 10px;
+    text-decoration: none;
+}
+
+.fixed-btn a i {
+    transform: rotate(90deg);
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.facebook {
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.facebook::before {
+    content: "\f09a";
+}

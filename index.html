@@ -2,48 +2,130 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Casa Residencial Buen Vivir</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <!-- Place favicon.ico in the root directory -->
+    <link href="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./index.css" />
+    <!-- Internal Libraries -->
     <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
   </head>
   <body>
-    <header>
-      <div class="menu-global">
-        <div class="menu-logo">
-          <img
-            src="./Images/logo/logo-right-text.jpg"
-            alt="logo"
-            height="90%"
-            width="280px"
-          />
-        </div>
-
-        <div class="menu-options">
-          <ul class="menu-options-list">
-            <li><a href="">Bienvenido</a></li>
-            <li><a href="">Quienes Somos</a></li>
-            <li><a href="">Nuestros Servicios</a></li>
-            <li><a href="">Ubicación</a></li>
-          </ul>
-        </div>
-
-        <div class="menu-contact">
-          <div class="consult-btn">
-            <i class="fa-phone"> </i>
-            <span class="text">Contactanos al</span>
-            <span class="tel-num">09-99-99-999</span>
-          </div>
+    <header class="menu-global">
+      <!-- logo -->
+      <div class="menu-logo">
+        <img
+          src="./Images/logo/logo-right-text.jpg"
+          alt="logo"
+          height="90%"
+          width="280px"
+        />
+      </div>
+      <!-- Navbar menu -->
+      <nav>
+        <ul>
+          <li><a href="">Bienvenido</a></li>
+          <li><a href="">Quienes Somos</a></li>
+          <li><a href="">Nuestros Servicios</a></li>
+          <li><a href="">Ubicación</a></li>
+        </ul>
+      </nav>
+      <!-- Contact Menu -->
+      <div class="menu-contact">
+        <div class="consult-btn">
+          <i class="fa-phone"> </i>
+          <span class="text">Contactanos al</span>
+          <span class="tel-num">09-99-99-999</span>
         </div>
       </div>
     </header>
-    <div class="section first">JAJAJAJA</div>
-    <div class="section second">HEHEHEHE</div>
+
+    <section class="bienvenido"></section>
+    <section class="quienes-somos">HEHEHEHE</section>
+    <section class="nuestros-servicios">HEHEHEHE</section>
+    <section class="ubicacion">
+      <div class="contacto">
+        <h1>Contacto</h1>
+        <span>
+          <a class="no-decoration-url"
+             href="mailto:contacto@residenciabuenvivir.cl"
+             title="contacto@residenciabuenvivir.cl"
+             _target="blank">
+            contacto@residenciabuenvivir.cl
+          </a>
+        </span>
+        <span>Januario Espinoza N°7071, comuna de La Reina, Santiago</span>
+
+      </div>
+
+      <div class="ubicacion-info">
+        <h1>¿Dónde nos ubicamos?</h1>
+        <div id="map"></div>
+      </div>
+
+    </section>
+
+    <section class="copyright">
+      Copyright © 2024 Casa Residencial Buen Vivir All Rights Reserved.
+    </section>
+
+    <div class="fixed-btn">
+      <a href="https://www.facebook.com/profile.php?id=61559338965947" target="_blank" title"="Facebook">
+        <i class="facebook"> </i>
+        <span>FACEBOOK</span>
+      </a>
+    </div>
+
+    <!-- EXTERNAL SCRIPTS -->
+    <script type="text/javascript" src="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.js"></script>
+
+    <script type="text/javascript">
+     const houseLocation = [-70.555798, -33.461924];
+     const map = new maplibregl.Map({
+       container: "map",
+       style: {
+         version: 8,
+         sources: {
+           osm: {
+             type: 'raster',
+             tiles: ['https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'],
+             tileSize: 256,
+             attribution: '&copy; OpenStreetMap Contributors',
+             maxzoom: 19
+           }
+         },
+         layers: [
+           {
+             id: 'osm',
+             type: 'raster',
+             source: 'osm'
+           }
+         ]
+       },
+       center: houseLocation,
+       zoom: 15,
+     });
+
+     const customMarker = () => {
+       const el = document.createElement('div');
+       el.style.backgroundImage = 'url(./Images/logo/logo-cicle-text.jpg)'; // Ruta de la imagen personalizada
+       el.style.width = '80px'; // Ancho de la imagen
+       el.style.height = '65px'; // Alto de la imagen
+       el.style.backgroundSize = '100%'; // Ajustar la imagen al tamaño del contenedor
+       return el;
+     };
+
+
+     const marker = new maplibregl.Marker({
+       element: customMarker(),
+       anchor: 'bottom' // Alinear la parte inferior de la imagen con las coordenadas
+     });
+     marker.setLngLat(houseLocation);
+     marker.addTo(map);
+    </script>
   </body>
+
 </html>

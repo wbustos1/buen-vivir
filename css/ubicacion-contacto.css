@@ -1,0 +1,55 @@
+section.ubicacion-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b6494e;
+}
+
+section.ubicacion-contacto .left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+section.ubicacion-contacto .right-content {
+    height: 100%;
+    width: 50%;
+}
+
+section.ubicacion-contacto .left-content .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    font-weight: 600;
+    border-radius: 15px;
+    height: 90%;
+    width: 90%;
+}
+section.ubicacion-contacto .left-content h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+    background-color: #f7f7f7;
+    padding: 0.5em 1em;
+    cursor: default;
+}
+
+section.ubicacion-contacto span,
+section.ubicacion-contacto .left-content span a {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color: #f7f7f7;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}

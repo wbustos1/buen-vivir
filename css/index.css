@@ -20,6 +20,7 @@ section {
 }
 
 section.bienvenido {
+    background-color: #f7f7f7;
     padding-top: 7em;
 }
 
@@ -32,47 +33,6 @@ section.quienes-somos {
 
 section.nuestros-servicios {
     background-color: green;
-}
-
-section.ubicacion {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #b6494e;
-}
-
-section.ubicacion h1 {
-    color: #f7f7f7;
-}
-section.ubicacion .contacto {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    border: 1px solid rgba(255, 255, 255, 0.34);
-    font-weight: 600;
-    border-radius: 15px;
-    height: 90%;
-    width: 40%;
-}
-
-section.ubicacion span,
-section.ubicacion span a {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    color: #f7f7f7;
-}
-
-section.ubicacion h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-}
-
-#map {
-    width: 900px;
-    height: 600px;
 }
 
 section.copyright {

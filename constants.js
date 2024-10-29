@@ -13,7 +13,32 @@ export const IMG_NAMES = [
 ];
 
 export const TEXT_CARRUSEL = [
-  {
-    title: "Titulo1",
-  },
+  [
+    {
+      title: "Titulo 1-1",
+      content: `Contenido de prueba 1`,
+    },
+    {
+      title: "Titulo 1-2",
+      content: `Contenido de prueba 2`,
+    },
+    {
+      title: "Titulo 1-3",
+      content: `Contenido de prueba 3`,
+    },
+  ],
+  [
+    {
+      title: "Titulo 2-1",
+      content: `Contenido de prueba 4`,
+    },
+    {
+      title: "Titulo 2-2",
+      content: `Contenido de prueba 5`,
+    },
+    {
+      title: "Titulo 2-3",
+      content: `Contenido de prueba 6`,
+    },
+  ],
 ];

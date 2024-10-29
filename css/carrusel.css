@@ -18,7 +18,7 @@ section.bienvenido #carrusel img.invisible {
     opacity: 0;
 }
 
-.carrusel-text-container {
+.carrusel-card-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -32,12 +32,12 @@ section.bienvenido #carrusel img.invisible {
     cursor: default;
 }
 
-.invisible {
+.invisible-card-container {
     margin-top: 2em;
     opacity: 0;
 }
 
-.carrusel-text {
+.carrusel-card {
     /* 182,73,78 // #b6494e */
     /* 247,247,247 // ##f7f7f7 // #ededed */
     /* background-color: rgba(247, 247, 247, 0.8); */
@@ -52,13 +52,13 @@ section.bienvenido #carrusel img.invisible {
     transition: all 0.2s ease;
 }
 
-.carrusel-text h1 {
+.carrusel-card h1 {
     color: #b6494e;
     padding: 0;
     margin: 0 0 0.5em 0;
 }
 
-.carrusel-text:hover {
+.carrusel-card:hover {
     margin-right: 1em;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

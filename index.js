@@ -14,6 +14,15 @@ const onScroll_menuButtomBorder = () => {
   }
 };
 
+const showNextElement = (elements, invisibleClass, visibleClass, idx) => {
+  const prevIdx = idx.curr === 0 ? elements.length - 1 : idx.curr - 1;
+
+  elements[prevIdx].className = invisibleClass;
+  elements[idx.curr].className = visibleClass;
+
+  idx.curr = idx.curr === elements.length - 1 ? 0 : idx.curr + 1;
+};
+
 const createCarrusel = (imgDir, imgNameList, transitionSeconds) => {
   const carruselDiv = $("#carrusel");
   const imgElements = [];
@@ -25,22 +34,65 @@ const createCarrusel = (imgDir, imgNameList, transitionSeconds) => {
     carruselDiv.appendChild(img);
   });
 
-  let currentIdx = 0;
+  const currentIdx = { curr: 0 };
+  const showNext = () =>
+    showNextElement(imgElements, "invisible", "", currentIdx);
+  showNext();
+  setInterval(showNext, 1000 * transitionSeconds);
+};
 
-  const showNextImg = () => {
-    const prevIdx = currentIdx === 0 ? imgNameList.length - 1 : currentIdx - 1;
+const createCarruselCards = (carruselCardContentMatrix, transitionSeconds) => {
+  const carruselDiv = $("#carrusel");
+  const invisibleClassName = "carrusel-card-container invisible-card-container";
+  const normalClassName = "carrusel-card-container";
 
-    imgElements[prevIdx].className = "invisible";
-    imgElements[currentIdx].className = "";
+  // LIST OF CARD CONTAINER ELEMENTS TO MANIPULATE
+  const cardContainerDivs = [];
+  carruselCardContentMatrix.forEach((cardContentArray) => {
+    // CREATE CARD CONTAINER
+    const cardContainerDiv = document.createElement("div");
+    cardContainerDiv.className = invisibleClassName;
 
-    currentIdx = currentIdx === imgNameList.length - 1 ? 0 : currentIdx + 1;
-  };
+    cardContentArray.forEach((cardContent) => {
+      // CARD DIV
+      const cardDiv = document.createElement("div");
+      cardDiv.className = "carrusel-card";
 
-  showNextImg();
-  setInterval(showNextImg, 1000 * transitionSeconds);
+      // CARD TITLE
+      const titleElement = document.createElement("h1");
+      titleElement.textContent = cardContent.title;
+      // CARD CONTENT
+      const contentElement = document.createElement("span");
+      contentElement.textContent = cardContent.content;
+      // ADD ELEMENTS TO THE CARD
+      cardDiv.appendChild(titleElement);
+      cardDiv.appendChild(contentElement);
+
+      // ADD CARD TO THE CONTAINER
+      cardContainerDiv.appendChild(cardDiv);
+    });
+
+    // ADD CARD CONTAINER INTO #carrusel DIV
+    carruselDiv.appendChild(cardContainerDiv);
+
+    // ADD THE CARD ELEMENTS AND CARD CONTAINER ELEMENTS
+    cardContainerDivs.push(cardContainerDiv);
+  });
+
+  const currentIdx = { curr: 0 };
+  const showNext = () =>
+    showNextElement(
+      cardContainerDivs,
+      invisibleClassName,
+      normalClassName,
+      currentIdx,
+    );
+  showNext();
+  setInterval(showNext, 1000 * transitionSeconds);
 };
 
 document.addEventListener("scroll", onScroll_menuButtomBorder);
 document.addEventListener("DOMContentLoaded", () => {
   createCarrusel(IMG_DIR, IMG_NAMES, 5);
+  createCarruselCards(TEXT_CARRUSEL, 5);
 });

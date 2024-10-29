@@ -1,0 +1,64 @@
+section.bienvenido #carrusel {
+    position: relative;
+    width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
+    height: 900px; /* Ajusta la altura del contenedor según sea necesario */
+    overflow: visible;
+}
+section.bienvenido #carrusel img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor manteniendo la relación de aspecto */
+    opacity: 1;
+    transition: all 1s ease;
+    border-radius: 0 20px 20px 0;
+}
+
+section.bienvenido #carrusel img.invisible {
+    opacity: 0;
+}
+
+.carrusel-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    right: -20%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease;
+    cursor: default;
+}
+
+.invisible {
+    margin-top: 2em;
+    opacity: 0;
+}
+
+.carrusel-text {
+    /* 182,73,78 // #b6494e */
+    /* 247,247,247 // ##f7f7f7 // #ededed */
+    /* background-color: rgba(247, 247, 247, 0.8); */
+    background-color: #ededed;
+    padding: 1.5em;
+    border-radius: 15px;
+    text-align: center;
+    width: 30%;
+    margin-left: auto; /* Alinea a la derecha */
+    /*border: 2px solid #b6494e;*/
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.carrusel-text h1 {
+    color: #b6494e;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+}
+
+.carrusel-text:hover {
+    margin-right: 1em;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

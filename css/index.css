@@ -24,32 +24,12 @@ section.bienvenido {
     padding-top: 7em;
 }
 
-section.bienvenido #carrusel {
-    position: relative;
-    width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
-    height: 900px; /* Ajusta la altura del contenedor según sea necesario */
-    border-radius: 0 20px 20px 0;
-    overflow: hidden;
-}
-section.bienvenido #carrusel img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor manteniendo la relación de aspecto */
-    opacity: 1;
-    transition: all 1s ease;
-}
-
-section.bienvenido #carrusel img.invisible {
-    opacity: 0;
-}
-
 section.quienes-somos {
-    background-color: yellow;
+    background-color: #ededed;
 }
 
 section.nuestros-servicios {
-    background-color: green;
+    background-color: #ededed;
 }
 
 section.copyright {

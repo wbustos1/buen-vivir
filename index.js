@@ -54,5 +54,5 @@ const createCarrusel = (imgDir, imgNameList, transitionSeconds) => {
 
 document.addEventListener("scroll", onScroll_menuButtomBorder);
 document.addEventListener("DOMContentLoaded", () => {
-  createCarrusel(IMG_DIR, IMG_NAMES, 3);
+  createCarrusel(IMG_DIR, IMG_NAMES, 5);
 });

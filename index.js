@@ -1,18 +1,6 @@
-const $ = (selector) => document.querySelector(selector);
+import { IMG_DIR, IMG_NAMES, TEXT_CARRUSEL } from "./constants.js";
 
-const IMG_DIR = "./Images/carrusel";
-const IMG_NAMES = [
-  "img1.png",
-  "img2.png",
-  "img3.jpg",
-  "img4.jpg",
-  "img5.jpg",
-  "img6.jpg",
-  "img7.jpg",
-  "img8.jpg",
-  "img9.jpg",
-  "img10.jpg",
-];
+const $ = (selector) => document.querySelector(selector);
 
 const globalMenu_className = ".menu-global";
 const globalMenu_scrollClass = "menu-global-scrolled";

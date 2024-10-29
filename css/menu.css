@@ -99,6 +99,7 @@ nav ul li a:hover::before {
     transition: all 0.3s ease-out;
     font-size: 20px;
     font-weight: 500;
+    padding-left: 1em;
 }
 .menu-contact .consult-btn * {
     transition: inherit;
@@ -121,7 +122,7 @@ nav ul li a:hover::before {
     text-rendering: auto;
     font-size: 20px;
     transition: all 0.5s;
-    margin-right: 15px;
+    margin-right: 1em;
 }
 .menu-contact .fa-phone::before {
     content: "\f095";

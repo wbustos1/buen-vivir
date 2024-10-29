@@ -11,7 +11,7 @@ section.bienvenido #carrusel img {
     object-fit: cover; /* Asegura que la imagen cubra el contenedor manteniendo la relación de aspecto */
     opacity: 1;
     transition: all 1s ease;
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
 }
 
 section.bienvenido #carrusel img.invisible {

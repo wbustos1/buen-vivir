@@ -60,7 +60,7 @@ section.bienvenido #carrusel img.invisible {
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
     transition:
         opacity 2s ease,
-        box-shadow 0.5s ease,
+        box-shadow 0.8s ease,
         margin-top 2s ease,
         margin-right 0.5s ease,
         padding 0.4s ease;
@@ -76,5 +76,5 @@ section.bienvenido #carrusel img.invisible {
 .carrusel-card.animate {
     /*margin-right: 0.5em;*/
     /* padding: 5em; */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 3px rgba(0, 0, 0, 0.3);
 }

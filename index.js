@@ -23,6 +23,22 @@ const showNextElement = (elements, invisibleClass, visibleClass, idx) => {
   idx.curr = idx.curr === elements.length - 1 ? 0 : idx.curr + 1;
 };
 
+const changeElementsClassNameBySecond = (
+  elements,
+  className,
+  seconds,
+  index,
+) => {
+  if (index >= elements.length) {
+    return;
+  }
+
+  setTimeout(() => {
+    elements[index].className = className;
+    changeElementsClassNameBySecond(elements, className, seconds, index + 1);
+  }, seconds * 1000);
+};
+
 const createCarrusel = (imgDir, imgNameList, transitionSeconds) => {
   const carruselDiv = $("#carrusel");
   const imgElements = [];
@@ -43,20 +59,24 @@ const createCarrusel = (imgDir, imgNameList, transitionSeconds) => {
 
 const createCarruselCards = (carruselCardContentMatrix, transitionSeconds) => {
   const carruselDiv = $("#carrusel");
-  const invisibleClassName = "carrusel-card-container invisible-card-container";
-  const normalClassName = "carrusel-card-container";
+  const invisibleContainerClassName =
+    "carrusel-card-container invisible-card-container";
+  const normalContainerClassName = "carrusel-card-container";
+
+  const invisibleCardClassName = "carrusel-card invisible-card";
+  const normalCardClassName = "carrusel-card";
 
   // LIST OF CARD CONTAINER ELEMENTS TO MANIPULATE
   const cardContainerDivs = [];
   carruselCardContentMatrix.forEach((cardContentArray) => {
     // CREATE CARD CONTAINER
     const cardContainerDiv = document.createElement("div");
-    cardContainerDiv.className = invisibleClassName;
+    cardContainerDiv.className = invisibleContainerClassName;
 
     cardContentArray.forEach((cardContent) => {
       // CARD DIV
       const cardDiv = document.createElement("div");
-      cardDiv.className = "carrusel-card";
+      cardDiv.className = invisibleCardClassName;
 
       // CARD TITLE
       const titleElement = document.createElement("h1");
@@ -79,14 +99,50 @@ const createCarruselCards = (carruselCardContentMatrix, transitionSeconds) => {
     cardContainerDivs.push(cardContainerDiv);
   });
 
+  // DYNAMIC INDEX
   const currentIdx = { curr: 0 };
-  const showNext = () =>
+
+  // SECONDS DEFINITION
+  const secondsToTransitEach = 0.5;
+  const secondsDelayToDissapearAll =
+    transitionSeconds -
+    cardContainerDivs[currentIdx.curr].children.length *
+      secondsToTransitEach *
+      2; // Is 2 because count when all elements appear/dissapear
+
+  // FUNCTION TO SHOW NEXT CONTAINER
+  const showNext = () => {
+    const currentChildrens = Object.values(
+      cardContainerDivs[currentIdx.curr].children,
+    );
+
     showNextElement(
       cardContainerDivs,
-      invisibleClassName,
-      normalClassName,
+      invisibleContainerClassName,
+      normalContainerClassName,
       currentIdx,
     );
+
+    // Show All the Cards
+    changeElementsClassNameBySecond(
+      currentChildrens,
+      normalCardClassName,
+      secondsToTransitEach,
+      0,
+    );
+
+    // DISSAPEAR ALL THE CARDS
+    setTimeout(() => {
+      changeElementsClassNameBySecond(
+        currentChildrens,
+        invisibleCardClassName,
+        secondsToTransitEach,
+        0,
+      );
+    }, secondsDelayToDissapearAll * 1000);
+  };
+
+  // FIRST EXECUTION TO SHOW NEXT CONTAINER
   showNext();
   setInterval(showNext, 1000 * transitionSeconds);
 };
@@ -94,5 +150,5 @@ const createCarruselCards = (carruselCardContentMatrix, transitionSeconds) => {
 document.addEventListener("scroll", onScroll_menuButtomBorder);
 document.addEventListener("DOMContentLoaded", () => {
   createCarrusel(IMG_DIR, IMG_NAMES, 5);
-  createCarruselCards(TEXT_CARRUSEL, 5);
+  createCarruselCards(TEXT_CARRUSEL, 15);
 });

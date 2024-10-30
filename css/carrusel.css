@@ -33,7 +33,7 @@ section.bienvenido #carrusel img.invisible {
 }
 
 .invisible-card-container {
-    margin-top: -3em;
+    z-index: 0;
     opacity: 0;
 }
 
@@ -58,7 +58,12 @@ section.bienvenido #carrusel img.invisible {
     margin-left: auto; /* Alinea a la derecha */
     /*border: 2px solid #b6494e;*/
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
-    transition: all 2s ease;
+    transition:
+        opacity 2s ease,
+        box-shadow 0.5s ease,
+        margin-top 2s ease,
+        margin-right 0.5s ease,
+        padding 0.4s ease;
 }
 
 .carrusel-card h1 {
@@ -67,7 +72,9 @@ section.bienvenido #carrusel img.invisible {
     margin: 0 0 0.5em 0;
 }
 
-.carrusel-card:hover {
-    margin-right: 1em;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+/* .animar will be added by JS to the element on hover */
+.carrusel-card.animate {
+    /*margin-right: 0.5em;*/
+    /* padding: 5em; */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }

@@ -5,6 +5,8 @@ const $ = (selector) => document.querySelector(selector);
 const globalMenu_className = ".menu-global";
 const globalMenu_scrollClass = "menu-global-scrolled";
 
+/* === UTILITIES === */
+
 const onScroll_menuButtomBorder = () => {
   const menu = $(globalMenu_className);
   if (window.scrollY > 0) {
@@ -12,6 +14,39 @@ const onScroll_menuButtomBorder = () => {
   } else {
     menu.classList.remove(globalMenu_scrollClass);
   }
+};
+
+const addcompleteAnimationTransitionOnHover = (
+  targetClassName,
+  transitionClassName,
+) => {
+  const targetElements = document.querySelectorAll(targetClassName);
+
+  targetElements.forEach((element) => {
+    let isMouseOver = false;
+    let transitioned = false;
+
+    element.addEventListener("mouseenter", () => {
+      isMouseOver = true;
+      element.classList.add(transitionClassName);
+    });
+
+    element.addEventListener("mouseleave", () => {
+      isMouseOver = false;
+      if (transitioned) {
+        element.classList.remove(transitionClassName);
+        transitioned = false;
+      }
+    });
+
+    element.addEventListener("transitionend", () => {
+      transitioned = true;
+      if (!isMouseOver) {
+        element.classList.remove(transitionClassName);
+        transitioned = false;
+      }
+    });
+  });
 };
 
 const showNextElement = (elements, invisibleClass, visibleClass, idx) => {
@@ -38,6 +73,8 @@ const changeElementsClassNameBySecond = (
     changeElementsClassNameBySecond(elements, className, seconds, index + 1);
   }, seconds * 1000);
 };
+
+/* === FUNTIONS === */
 
 const createCarrusel = (imgDir, imgNameList, transitionSeconds) => {
   const carruselDiv = $("#carrusel");
@@ -141,6 +178,16 @@ const createCarruselCards = (carruselCardContentMatrix, transitionSeconds) => {
       );
     }, secondsDelayToDissapearAll * 1000);
   };
+
+  // ADD ANIMATION TRANSITION TO THE CREATED CARDS
+  // NOTE: This transitions will happen "on Hover" but the animation
+  // will continue until is complete. Doesn't matters if the mouse is still
+  // over the element or not.
+  // const allCards = cardContainerDivs
+  //   .map((cardContainer) => Object.values(cardContainer.children))
+  //   .flat();
+
+  addcompleteAnimationTransitionOnHover(".carrusel-card", "animate");
 
   // FIRST EXECUTION TO SHOW NEXT CONTAINER
   showNext();

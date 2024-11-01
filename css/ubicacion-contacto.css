@@ -1,11 +1,11 @@
-section.ubicacion-contacto {
+section#ubicacion-contacto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #b6494e;
 }
 
-section.ubicacion-contacto .left-content {
+section#ubicacion-contacto .left-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,12 +14,12 @@ section.ubicacion-contacto .left-content {
     width: 50%;
 }
 
-section.ubicacion-contacto .right-content {
+section#ubicacion-contacto .right-content {
     height: 100%;
     width: 50%;
 }
 
-section.ubicacion-contacto .left-content .contacto {
+section#ubicacion-contacto .left-content .contacto {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,7 @@ section.ubicacion-contacto .left-content .contacto {
     height: 90%;
     width: 90%;
 }
-section.ubicacion-contacto .left-content h1 {
+section#ubicacion-contacto .left-content h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,8 +41,8 @@ section.ubicacion-contacto .left-content h1 {
     cursor: default;
 }
 
-section.ubicacion-contacto span,
-section.ubicacion-contacto .left-content span a {
+section#ubicacion-contacto span,
+section#ubicacion-contacto .left-content span a {
     display: flex;
     justify-content: center;
     font-size: 20px;

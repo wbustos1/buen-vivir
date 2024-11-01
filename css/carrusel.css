@@ -1,10 +1,10 @@
-section.bienvenido #carrusel {
+section#bienvenido #carrusel {
     position: relative;
     width: 80%; /* Ajusta el ancho del contenedor según sea necesario */
     height: 900px; /* Ajusta la altura del contenedor según sea necesario */
     overflow: visible;
 }
-section.bienvenido #carrusel img {
+section#bienvenido #carrusel img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -14,7 +14,7 @@ section.bienvenido #carrusel img {
     border-radius: 0 15px 15px 0;
 }
 
-section.bienvenido #carrusel img.invisible {
+section#bienvenido #carrusel img.invisible {
     opacity: 0;
 }
 

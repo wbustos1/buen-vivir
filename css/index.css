@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -19,16 +22,49 @@ section {
     height: 50em;
 }
 
-section.bienvenido {
+section#bienvenido {
     background-color: #f7f7f7;
     padding-top: 7em;
 }
 
-section.quienes-somos {
+section#quienes-somos {
     background-color: #ededed;
 }
 
-section.nuestros-servicios {
+.title-box {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 70px;
+}
+
+.title-box .title-wrap {
+    display: flex;
+    align-items: flex-end;
+    flex-shrink: 0;
+    padding: 10px 25px 0 25px;
+    position: relative;
+    margin: 0 auto;
+    color: #b6494e;
+}
+
+.title-box::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(182, 73, 78, 0.4);
+}
+
+.title-box::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(182, 73, 78, 0.4);
+}
+
+section#nuestros-servicios {
     background-color: #ededed;
 }
 

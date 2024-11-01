@@ -28,21 +28,22 @@ section#bienvenido {
 }
 
 section#quienes-somos {
+    display: flex;
+    justify-content: center;
     background-color: #ededed;
 }
 
 .title-box {
-    position: relative;
     display: flex;
-    align-items: flex-end;
-    padding-top: 70px;
+    align-items: center;
+    margin-top: 10em;
+    height: 2em;
+    width: 50%;
 }
 
 .title-box .title-wrap {
-    display: flex;
-    align-items: flex-end;
     flex-shrink: 0;
-    padding: 10px 25px 0 25px;
+    padding: 0 25px;
     position: relative;
     margin: 0 auto;
     color: #b6494e;

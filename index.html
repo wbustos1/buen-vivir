@@ -121,6 +121,9 @@
        zoom: 15,
      });
 
+     map.addControl(new maplibregl.NavigationControl());
+     map.scrollZoom.disable();
+
      const customMarker = () => {
        const el = document.createElement('div');
        el.style.backgroundImage = 'url(./Images/logo/logo-cicle-text.jpg)'; // Ruta de la imagen personalizada

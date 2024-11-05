@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/menu.css" />
     <link rel="stylesheet" href="./css/ubicacion-contacto.css" />
     <link rel="stylesheet" href="./css/carrusel.css" />
+    <link rel="stylesheet" href="./css/quienes-somos.css" />
+    <link rel="stylesheet" href="./css/nuestros-servicios.css" />
   </head>
   <body>
     <header class="menu-global">
@@ -47,16 +49,45 @@
 
     <section id="bienvenido">
       <div id="carrusel"></div>
-
     </section>
+
     <section id="quienes-somos">
       <div class="title-box">
         <div class="title-wrap">
           <h1>Quienes Somos</h1>
         </div>
       </div>
+
+      <div class="contenedor-tarjetas">
+        <div class="tarjeta">
+          <img src="./Images/example1.webp" alt="" />
+          <h1>Esto es un ejemplo</h1>
+          <span>Esto es el texto debajo</span>
+        </div>
+
+        <div class="tarjeta">
+          <img src="./Images/example2.webp" alt="" />
+          <h1>Esto es un ejemplo</h1>
+          <span>Esto es el texto debajo</span>
+        </div>
+
+        <div class="tarjeta">
+          <img src="./Images/example3.webp" alt="" />
+          <h1>Esto es un ejemplo</h1>
+          <span>Esto es el texto debajo</span>
+        </div>
+      </div>
+
     </section>
-    <section id="nuestros-servicios"></section>
+
+    <section id="nuestros-servicios">
+      <div class="title-box">
+        <div class="title-wrap">
+          <h1>Nuestros Servicios</h1>
+        </div>
+      </div>
+    </section>
+
     <section id="ubicacion-contacto">
       <div class="left-content">
         <div class="contacto">
@@ -126,9 +157,9 @@
 
      const customMarker = () => {
        const el = document.createElement('div');
-       el.style.backgroundImage = 'url(./Images/logo/logo-cicle-text.jpg)'; // Ruta de la imagen personalizada
-       el.style.width = '80px'; // Ancho de la imagen
-       el.style.height = '65px'; // Alto de la imagen
+       el.style.backgroundImage = 'url(./Images/logo/location-logo-v6.png)'; // Ruta de la imagen personalizada
+       el.style.width = '150px'; // Ancho de la imagen
+       el.style.height = '150px'; // Alto de la imagen
        el.style.backgroundSize = '100%'; // Ajustar la imagen al tamaño del contenedor
        return el;
      };
@@ -136,7 +167,8 @@
 
      const marker = new maplibregl.Marker({
        element: customMarker(),
-       anchor: 'bottom' // Alinear la parte inferior de la imagen con las coordenadas
+       anchor: 'bottom', // Alinear la parte inferior de la imagen con las coordenadas
+       offset: [0, 20] // Ajuste hacia abajo para encajar en Januario Espinoza
      });
      marker.setLngLat(houseLocation);
      marker.addTo(map);

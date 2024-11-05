@@ -27,18 +27,16 @@ section#bienvenido {
     padding-top: 7em;
 }
 
-section#quienes-somos {
-    display: flex;
-    justify-content: center;
-    background-color: #ededed;
-}
-
 .title-box {
     display: flex;
     align-items: center;
     margin-top: 10em;
     height: 2em;
     width: 50%;
+}
+
+.title-box h1 {
+    font-size: 30px;
 }
 
 .title-box .title-wrap {

@@ -1,0 +1,15 @@
+section#nuestros-servicios {
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+section#nuestros-servicios .servicio {
+    display: flex;
+    justify-content: center;
+    background-color: #ededed;
+}
+
+section#nuestros-servicios .servicio img {
+    border-radius: 50px;
+}

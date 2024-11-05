@@ -1,0 +1,28 @@
+section#quienes-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+}
+
+section#quienes-somos .contenedor-tarjetas {
+    display: flex;
+    margin-top: 7em;
+    justify-content: space-evenly;
+    width: 80%;
+    background-color: #ededed;
+}
+
+section#quienes-somos .tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
+}
+
+section#quienes-somos .tarjeta img {
+    border-radius: 150px;
+    width: 400px;
+}

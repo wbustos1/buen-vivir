@@ -1,6 +1,8 @@
 section#nuestros-servicios {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color: #ededed;
 }
 
@@ -10,6 +12,13 @@ section#nuestros-servicios .servicio {
     background-color: #ededed;
 }
 
-section#nuestros-servicios .servicio img {
-    border-radius: 50px;
+section#nuestros-servicios .contenedor-tarjeta-servicio {
+    margin-top: 7em;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+section#nuestros-servicios .contenedor-tarjeta-servicio .tarjeta-servicio {
+    text-align: center;
 }

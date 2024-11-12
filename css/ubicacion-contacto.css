@@ -14,6 +14,43 @@ section#ubicacion-contacto .left-content {
     width: 50%;
 }
 
+ul.social-list {
+    display: flex;
+    gap: 1em;
+    padding: 0;
+}
+
+.social-list .instagram,
+.social-list .facebook {
+    font: normal normal normal 20px/1 FontAwesome;
+}
+
+section#ubicacion-contacto .left-content .social-list li {
+    text-decoration: none;
+    list-style: none;
+}
+
+section#ubicacion-contacto .left-content .social-list li a {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    line-height: 23px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+section#ubicacion-contacto .left-content .social-list li a:hover {
+    background-color: white;
+    box-shadow: 0 2px 6px 4px rgba(0, 0, 0, 0.1);
+    color: #b6494e;
+}
+
 section#ubicacion-contacto .right-content {
     height: 100%;
     width: 50%;

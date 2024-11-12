@@ -4,6 +4,8 @@ section#quienes-somos {
     justify-content: center;
     align-items: center;
     background-color: #ededed;
+    height: 30em;
+    padding-top: 12em;
 }
 
 section#quienes-somos .contenedor-tarjetas {

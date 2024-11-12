@@ -63,10 +63,6 @@ section#bienvenido {
     background-color: rgba(182, 73, 78, 0.4);
 }
 
-section#nuestros-servicios {
-    background-color: #ededed;
-}
-
 section.copyright {
     display: flex;
     align-items: center;
@@ -109,9 +105,13 @@ section.copyright {
     font-size: 18px;
     margin-bottom: 5px;
 }
-.facebook {
+.facebook,
+.instagram {
     font: normal normal normal 14px/1 FontAwesome;
 }
 .facebook::before {
     content: "\f09a";
+}
+.instagram::before {
+    content: "\f16d";
 }

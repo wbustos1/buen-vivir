@@ -1,6 +1,6 @@
 export const IMG_DIR = "./Images/carrusel";
 export const IMG_NAMES = [
-  "img1.png",
+  "img1.jpg",
   "img2.jpg",
   "img3.jpg",
   "img4.jpg",
@@ -10,6 +10,7 @@ export const IMG_NAMES = [
   "img8.jpg",
   "img9.jpg",
   "img10.jpg",
+  "img11.jpg",
 ];
 
 export const TEXT_CARRUSEL = [

@@ -22,6 +22,14 @@ section#quienes-somos .tarjeta {
     justify-content: center;
     align-items: center;
     background-color: #ededed;
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding: 1em; /* Añade un poco de espacio alrededor del texto */
+}
+
+section#quienes-somos .tarjeta span {
+    word-wrap: break-word; /* Permite que las palabras largas se dividan y se envuelvan */
+    overflow-wrap: break-word; /* Alternativa moderna a word-wrap */
+    max-width: 60%; /* Asegura que el texto no se desborde de la tarjeta */
 }
 
 section#quienes-somos .tarjeta img {

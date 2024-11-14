@@ -6,10 +6,19 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Place favicon.ico in the root directory -->
-    <link href="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
 
     <!-- our project just needs Font Awesome Solid + Brands -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Internal Libraries -->
     <script type="module" src="./index.js" defer></script>
@@ -63,24 +72,42 @@
 
       <div class="contenedor-tarjetas">
         <div class="tarjeta">
-          <img src="./Images/quienes-somos/Integrantes.jpg" alt="Integrantes de la institución" />
+          <img
+            src="./Images/quienes-somos/Integrantes.jpg"
+            alt="Integrantes de la institución"
+          />
           <h1>Nuestro equipo</h1>
-          <span>Nuestra institución posee personal con años de experiencia en el cuidado y asistencia de adultos mayores.</span>
+          <span
+            >Nuestra institución posee personal con años de experiencia en el
+            cuidado y asistencia de adultos mayores.</span
+          >
         </div>
 
         <div class="tarjeta">
-          <img src="./Images/quienes-somos/Asistencia.jpg" alt="Personal asistiendo al internado" />
+          <img
+            src="./Images/quienes-somos/Asistencia.jpg"
+            alt="Personal asistiendo al internado"
+          />
           <h1>Nuestras instalaciones</h1>
-          <span>Ofrecemos instalaciones adaptadas para personas de mobilidad reducida. Además de asistir a nuestros residentes en todas sus necesidades.</span>
+          <span
+            >Ofrecemos instalaciones adaptadas para personas de mobilidad
+            reducida. Además de asistir a nuestros residentes en todas sus
+            necesidades.</span
+          >
         </div>
 
         <div class="tarjeta">
-          <img src="./Images/quienes-somos/Actividades.jpg" alt="Personal realizando actividades con el internado" />
+          <img
+            src="./Images/quienes-somos/Actividades.jpg"
+            alt="Personal realizando actividades con el internado"
+          />
           <h1>Nuestras actividades</h1>
-          <span>Definimos diferentes tipos de actividades según las necesidades de cada uno de nuestros residentes.</span>
+          <span
+            >Definimos diferentes tipos de actividades según las necesidades de
+            cada uno de nuestros residentes.</span
+          >
         </div>
       </div>
-
     </section>
 
     <section id="nuestros-servicios">
@@ -115,25 +142,33 @@
           <h1>Contacto</h1>
           <span>Teléfono: +56 9-94783185</span>
           <span>
-            <a class="no-decoration-url"
-               href="mailto:contacto@residenciabuenvivir.cl"
-               title="contacto@residenciabuenvivir.cl"
-               _target="blank">
+            <a
+              class="no-decoration-url"
+              href="mailto:contacto@residenciabuenvivir.cl"
+              title="contacto@residenciabuenvivir.cl"
+              _target="blank"
+            >
               contacto@residenciabuenvivir.cl
             </a>
           </span>
           <span>Januario Espinoza N°7071, comuna de La Reina, Santiago</span>
           <ul class="social-list">
             <li>
-              <a href="https://www.instagram.com/casaresidencialbuenvivir/" target="_black" title="Instagram">
-                <i class="instagram">
-                </i>
+              <a
+                href="https://www.instagram.com/casaresidencialbuenvivir/"
+                target="_black"
+                title="Instagram"
+              >
+                <i class="instagram"> </i>
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/profile.php?id=61559338965947" target="_black" title="Facebook">
-                <i class="facebook">
-                </i>
+              <a
+                href="https://www.facebook.com/profile.php?id=61559338965947"
+                target="_black"
+                title="Facebook"
+              >
+                <i class="facebook"> </i>
               </a>
             </li>
           </ul>
@@ -143,7 +178,6 @@
       <div class="right-content">
         <div id="map"></div>
       </div>
-
     </section>
 
     <section class="copyright">
@@ -151,64 +185,69 @@
     </section>
 
     <div id="lateral-facebook" class="fixed-btn">
-      <a href="https://www.facebook.com/profile.php?id=61559338965947" target="_blank" title"="Facebook">
+      <a
+        href="https://www.facebook.com/profile.php?id=61559338965947"
+        target="_blank"
+        title="Facebook"
+      >
         <i class="facebook"> </i>
         <span>FACEBOOK</span>
       </a>
     </div>
 
     <!-- EXTERNAL SCRIPTS -->
-    <script type="text/javascript" src="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/maplibre-gl@^4.7.1/dist/maplibre-gl.js"
+    ></script>
 
     <!-- INTERNAL SCRIPT -->
     <script type="text/javascript">
-     const houseLocation = [-70.555798, -33.461924];
-     const map = new maplibregl.Map({
-       container: "map",
-       style: {
-         version: 8,
-         sources: {
-           osm: {
-             type: 'raster',
-             tiles: ['https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'],
-             tileSize: 256,
-             attribution: '&copy; OpenStreetMap Contributors',
-             maxzoom: 19
-           }
-         },
-         layers: [
-           {
-             id: 'osm',
-             type: 'raster',
-             source: 'osm'
-           }
-         ]
-       },
-       center: houseLocation,
-       zoom: 15,
-     });
+      const houseLocation = [-70.555798, -33.461924];
+      const map = new maplibregl.Map({
+        container: "map",
+        style: {
+          version: 8,
+          sources: {
+            osm: {
+              type: "raster",
+              tiles: ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
+              tileSize: 256,
+              attribution: "&copy; OpenStreetMap Contributors",
+              maxzoom: 19,
+            },
+          },
+          layers: [
+            {
+              id: "osm",
+              type: "raster",
+              source: "osm",
+            },
+          ],
+        },
+        center: houseLocation,
+        zoom: 15,
+      });
 
-     map.addControl(new maplibregl.NavigationControl());
-     map.scrollZoom.disable();
+      map.addControl(new maplibregl.NavigationControl());
+      map.scrollZoom.disable();
 
-     const customMarker = () => {
-       const el = document.createElement('div');
-       el.style.backgroundImage = 'url(./Images/logo/location-logo-v6.png)'; // Ruta de la imagen personalizada
-       el.style.width = '150px'; // Ancho de la imagen
-       el.style.height = '150px'; // Alto de la imagen
-       el.style.backgroundSize = '100%'; // Ajustar la imagen al tamaño del contenedor
-       return el;
-     };
+      const customMarker = () => {
+        const el = document.createElement("div");
+        el.style.backgroundImage = "url(./Images/logo/location-logo-v6.png)"; // Ruta de la imagen personalizada
+        el.style.width = "150px"; // Ancho de la imagen
+        el.style.height = "150px"; // Alto de la imagen
+        el.style.backgroundSize = "100%"; // Ajustar la imagen al tamaño del contenedor
+        return el;
+      };
 
-
-     const marker = new maplibregl.Marker({
-       element: customMarker(),
-       anchor: 'bottom', // Alinear la parte inferior de la imagen con las coordenadas
-       offset: [0, 20] // Ajuste hacia abajo para encajar en Januario Espinoza
-     });
-     marker.setLngLat(houseLocation);
-     marker.addTo(map);
+      const marker = new maplibregl.Marker({
+        element: customMarker(),
+        anchor: "bottom", // Alinear la parte inferior de la imagen con las coordenadas
+        offset: [0, 20], // Ajuste hacia abajo para encajar en Januario Espinoza
+      });
+      marker.setLngLat(houseLocation);
+      marker.addTo(map);
     </script>
   </body>
-
 </html>

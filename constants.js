@@ -22,53 +22,45 @@ export const TEXT_CARRUSEL = [
     },
     {
       title: "Localidad",
-      content: `Nos ubicamos en Januario Espinoza 7071, Comuna la Reina. A tan solo dos cuadras de la Av. José Arrieta y a una cuadra de la Av. José Arrieta`,
+      content: `Nos ubicamos en Januario Espinoza 7071, comuna la Reina. A tan solo dos cuadras de la Av. Tobalaba y a una cuadra de la Av. José Arrieta`,
     },
     {
       title: "Instalaciones",
-      content: `Prueba 3`,
+      content: `Contamos con habitaciones individuales, compartidas, áreas de recreación y recepción de visitas.`,
     },
   ],
   [
     {
       title: "Atención Personalizada",
-      content: `Tenemos un cupo máximo de 6 personas a quienes atendemos de forma personalizada con el fin de maximizar su comodidad lo máximo posible.`,
+      content: `Tenemos un cupo máximo de 10 personas a quienes atendemos de forma personalizada con el fin de maximizar su comodidad.`,
     },
     {
-      title: "Actividades",
-      content: `Contenido de prueba 5`,
-    },
-    {
-      title: "Entretenimiento",
-      content: `Contenido de prueba 6`,
+      title: "Actividades Y Entretenimiento",
+      content: `Realizamos diversas actividades para nuestros residentes, tales como juegos de mesa, pinturas, caminatas y más`,
     },
   ],
   [
     {
       title: "Asistencia 24/7",
-      content: `Contenido de prueba 4`,
+      content: `Contamos con personal disponible las 24 hrs para atender a nuestros residentes en caso de cualquier eventualidad.`,
     },
     {
       title: "Asistencia de adminsitración de medicamentos",
-      content: `Contenido de prueba 5`,
-    },
-    {
-      title: "Horarios de comida",
-      content: `Contenido de prueba 6`,
+      content: ``,
     },
   ],
   [
     {
       title: "Habitaciones acondicionadas",
-      content: `Contenido de prueba 4`,
+      content: `Acondicionamos nuestras habitaciones a las necesidades de cada residente.`,
     },
     {
       title: "Sanitarios adaptados a personas de mobilidad reducida",
-      content: `Contenido de prueba 5`,
+      content: ``,
     },
     {
-      title: "Visitas sin restricciones",
-      content: `Contenido de prueba 6`,
+      title: "Visitas abiertas",
+      content: `Disponibilidad de visitas todos los días desde las 15:30 a 18:00 hrs.`,
     },
   ],
 ];

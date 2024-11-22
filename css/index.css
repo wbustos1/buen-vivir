@@ -116,3 +116,7 @@ section.copyright {
 .instagram::before {
     content: "\f16d";
 }
+
+.social-list {
+    font: normal normal normal 20px/1 FontAwesome;
+}

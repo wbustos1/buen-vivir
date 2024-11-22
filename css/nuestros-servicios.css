@@ -22,5 +22,12 @@ section#nuestros-servicios .contenedor-tarjeta-servicio {
 }
 
 section#nuestros-servicios .contenedor-tarjeta-servicio .tarjeta-servicio {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+}
+
+section#nuestros-servicios .contenedor-tarjeta-servicio .tarjeta-servicio i {
+    font: normal normal normal 60px/1 FontAwesome;
 }

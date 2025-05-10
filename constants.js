@@ -12,6 +12,11 @@ export const IMG_NAMES = [
   "img10.jpg",
   "img11.jpg",
   "img12.jpg",
+  "img13.jpg",
+  "img14.jpg",
+  "img15.jpg",
+  "img16.jpg",
+  "img17.jpg",
 ];
 
 export const TEXT_CARRUSEL = [

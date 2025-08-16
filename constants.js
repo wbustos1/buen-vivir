@@ -14,7 +14,7 @@ export const IMG_NAMES = [
   "img12.jpg",
   "img13.jpg",
   "img14.jpg",
-  "img15.jpg",
+  "img15.png",
   "img16.jpg",
   "img17.jpg",
 ];
